@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>APP</title>
+    <!-- Bootstrap -->
+    <link href="../cpnts/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../styles/主页.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/javascript" href="../scripts/主页.js" /> 
+
+<!--     <link href="../styles/slide1.css" rel="stylesheet" type="text/css" /> -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+<body>
+  <body>
+  <div class="container-all">
+
+  <div class="header">
+    <!-- 导航条 -->
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">APP</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">评价<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">发服务</a></li>
+            <li><a href="#">服务评价</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">消息<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">联系人</a></li>
+            <li><a href="#">订单信息</a></li>
+            <li><a href="#">系统信息</a></li>
+            <li><a href="#">提到我的</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">账户设置</a></li>
+            <li><a href="#">账户安全</a></li>
+            <li><a href="#">消息通知</a></li>
+            <li><a href="#">提到我的</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder=" ">
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+      </form>
+      </div>
+    </div>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- 导航条结束 -->
+  </div>
+
+  <div class="main">
+      <div style="width:720px;margin:0 auto;">
+    <ul id="tabs">
+      <li><a href="#" name="#tab1" id="current">主页</a></li>
+      <li><a href="#" name="#tab2" id="">相册</a></li>
+      <li><a href="#" name="#tab3" id="">评价</a></li>   
+    </ul>
+
+    <div id="content">
+      <div id="tab1" style="display: block;">
+         <!-- <div class="caption">   -->              
+            <p>①节前拼假：9月25日至30日连续请年休假6天。中秋假期（22日-24日）+ 年休假+ 国庆假期（1日-7日）= 16天长假；②节后拼假：10月8日至12日连续请年休假5天。国庆假期（1日-7日）+ 年休假+ 周末（13日-14日）= 14天长假。 </p>
+          <!-- </div> -->
+          <img src="../images/avatar/avatar07.png" >
+      </div>
+      <div id="tab2" style="display: none;">
+        <a href="#" class="thumbnail">
+          <img src="../images/avatar/avatar05.png" alt="...">
+        </a>
+      </div>
+      <div id="tab3" style="display: none;">
+        <a>
+          <input type="text" class="form-control" placeholder="服务态度" aria-describedby="basic-addon1">
+        </a>
+        <a>
+          <input type="text" class="form-control" placeholder="服务态度" aria-describedby="basic-addon1">
+        </a>
+        <a>
+          <input type="text" class="form-control" placeholder="服务态度" aria-describedby="basic-addon1">
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- main结束 -->
+
+  
+
+</body>
+
+<script type="text/javascript" src="../scripts/主页.js"></script>
+<script type="text/javascript">
+function resetTabs(){
+  $("#content > div").hide(); //隐藏所有内容
+  $("#tabs a").attr("id",""); //重置“id”   
+}
+
+var myUrl = window.location.href; //取得超链地址
+var myUrlTab = myUrl.substring(myUrl.indexOf("#")); 
+var myUrlTabName = myUrlTab.substring(0,4);
+
+(function(){
+  $("#content > div").hide(); // 最初隐藏所有内容
+  $("#tabs li:first a").attr("id","current"); // 激活第一个选项卡
+  $("#content > div:first").fadeIn(); // 显示第一个选项卡的内容
+
+  $("#tabs a").on("click",function(e) {
+    e.preventDefault();
+    if ($(this).attr("id") == "current"){ //检测当前选项卡
+      return       
+    }else{             
+      resetTabs();
+      $(this).attr("id","current"); // 激活这
+      $($(this).attr('name')).fadeIn(); // 显示当前选项卡的内容
+    }
+  });
+
+  for (i = 1; i <= $("#tabs li").length; i++) {
+    if(myUrlTab == myUrlTabName + i){
+      resetTabs();
+      $("a[name='"+myUrlTab+"']").attr("id","current"); // 激活url选项卡
+      $(myUrlTab).fadeIn(); // 显示url选项卡内容      
+    }
+  }
+})()
+</script>

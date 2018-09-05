@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>APP</title>
+    <!-- Bootstrap -->
+    <link href="../cpnts/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../styles/slide1.css" rel="stylesheet" type="text/css" />
+
+    <link href="../scripts/slide1.js" rel="stylesheet" type="text/script" />
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+  <div class="container-all">
+
+  <div class="header">
+    <!-- 导航条 -->
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">APP</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">评价<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">发服务</a></li>
+            <li><a href="#">服务评价</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">消息<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">联系人</a></li>
+            <li><a href="#">订单信息</a></li>
+            <li><a href="#">系统信息</a></li>
+            <li><a href="#">提到我的</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">账户设置</a></li>
+            <li><a href="#">账户安全</a></li>
+            <li><a href="#">消息通知</a></li>
+            <li><a href="#">提到我的</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder=" ">
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+      </form>
+      </div>
+    </div>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- 导航条结束 -->
+ </div>
+
+<!-- div居中左右分栏 -->
+<div class="main">
+  <div class="content">
+    <!-- 左侧栏 -->
+    <div class="leftnav">
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation" class="active"><a href="#">发服务</a></li>
+        <li role="presentation"><a href="#">服务评价</a></li>
+        <li role="presentation"><a href="#">朋友圈</a></li>
+        <li role="presentation"><a href="#">找人</a></li>
+        <li role="presentation"><a href="#">附近的人</a></li>
+      </ul>
+    </div>
+    <!-- 左侧栏结束 -->
+    <!-- 主栏 -->
+    <div class="right">
+      <div class="right-input">
+        <textarea class="form-control" rows="3"></textarea>
+      </div>
+      <div class="right-bottom">
+        <div class="btn-group" role="group" aria-label="...">
+          <!-- <button type="button" class="btn btn-default">表情</button> -->
+          <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">表情</button>
+          <button type="button" class="btn btn-default">图片</button>
+          <button type="button" class="btn btn-default">视频</button>
+        </div>
+        <button class="btn btn-default" type="submit">发布</button>
+      </div>
+    </div>
+    <!-- 主栏结束 -->
+</div>
+<!-- div居中左右分栏结束 -->
+
+
+</div>
+</body>
+
+  <script src="../cpnts/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+  <script src="../cpnts/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+</html>
